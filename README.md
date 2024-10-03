@@ -1,34 +1,27 @@
-# Drink It
+# Drink It - Water Refill Network
 
-Welcome to the **Drink It** project! This is a web application designed to help users discover and manage their favorite drinks. Whether you're looking for cocktails, mocktails, or other beverages, Drink It has you covered!
+## Project Overview
 
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+**Drink It** is a web application created by a group of five friends and students from CODE Berlin: Ada, Sherry, Nico, Juan, and Santiago. Our mission is to make water accessible for everyone, completely free of charge. We aim to connect small businesses and individuals by launching water refill stations at local businesses, fostering a sustainable future where clean drinking water is a right, not a privilege.
 
 ## Features
 
-- **Search Drinks**: Find drinks by name or ingredient.
-- **Drink Recipes**: Detailed recipes for each drink.
-- **Favorites**: Save your favorite drinks for easy access.
-- **User-friendly Interface**: A clean and intuitive UI for seamless navigation.
+- User-friendly interface to access information about our mission.
+- A sign-up and login system for users to create accounts and engage with the community.
+- An "About Us" page detailing our team and vision.
+- Responsive design for accessibility on various devices.
 
-## Technologies Used
+## Tech Stack
 
-- **React**: For building the user interface.
-- **CSS**: For styling the application.
-- **API**: (If applicable, mention any external APIs you are using, e.g., Cocktail DB API).
-- **Git**: For version control.
+- **Frontend**: React.js, React Router
+- **Styling**: CSS
+- **Development Tools**: Node.js, npm
 
 ## Installation
 
-To get a local copy up and running, follow these steps:
+To set up the project locally, follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/username/drink-it.git
+   git clone https://github.com/yourusername/drink-it.git
+   cd drink-it

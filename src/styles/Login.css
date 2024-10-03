@@ -1,0 +1,92 @@
+/* src/components/styles/LoginPage.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1c1c1e, #2a2a2c);
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif; /* Ensure this font is included in your project */
+}
+
+/* Login Container */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 40px rgba(0, 255, 171, 0.5);
+    backdrop-filter: blur(10px);
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Title */
+.login-title {
+    text-align: center;
+    color: #00FFAB;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px #00FFAB, 0 0 40px #00FFAB;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1em;
+    box-shadow: 0 2px 10px rgba(0, 255, 171, 0.5);
+    transition: 0.3s;
+}
+
+.input-field:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 255, 171, 0.7);
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #00FFAB, #ff00cc);
+    border: none;
+    border-radius: 10px;
+    color: #1c1c1e;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 171, 0.8);
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

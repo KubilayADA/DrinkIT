@@ -1,19 +1,37 @@
-// src/components/SignUp.jsx
-
 import React, { useState } from 'react';
-import '../styles/Signup.css'; 
+import '../styles/Signup.css';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 
-const SignUp = () => {
+const Signup = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const [address, setAddress] = useState(''); // Fix typo from 'adress' to 'address'
+    const [birthday, setBirthday] = useState('');
+    const navigate = useNavigate(); // Initialize useNavigate
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        console.log("Name:", name);
-        console.log("Email:", email);
-        console.log("Password:", password);
+
+        try {
+            const response = await fetch('http://localhost:5001/api/signup', { // Use your backend URL
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, password }),
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                setMessage('Signup successful! You can now log in.');
+                // Redirect to the login page
+                navigate('/login');
+            } else {
+                setMessage(data.message || 'Signup failed. Please try again.');
+            }
+        } catch (error) {
+            setMessage('Error: Unable to connect to the server.');
+        }
     };
 
     return (
@@ -23,7 +41,7 @@ const SignUp = () => {
                 <input
                     type="text"
                     className="input-field"
-                    placeholder="Name"
+                    placeholder="Full Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -44,8 +62,24 @@ const SignUp = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
+                <input
+                    type="text"
+                    className="input-field"
+                    placeholder="Address"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    required
+                />
+                <input
+                    type="date"
+                    className="input-field"
+                    value={birthday}
+                    onChange={(e) => setBirthday(e.target.value)}
+                    required
+                />
                 <button type="submit" className="submit-button">Sign Up</button>
             </form>
+            {message && <p className="message">{message}</p>}
             <footer className="footer">
                 <p>&copy; 2024 DRINK IT! All rights reserved.</p>
             </footer>
@@ -53,4 +87,4 @@ const SignUp = () => {
     );
 };
 
-export default SignUp;
+export default Signup;

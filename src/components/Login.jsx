@@ -1,15 +1,40 @@
 import React, { useState } from 'react';
 import '../styles/Login.css';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 
-const LoginPage = () => {
+const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const navigate = useNavigate(); // Initialize useNavigate
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle login logic here
-        console.log("Email:", email);
-        console.log("Password:", password);
+
+        try {
+            const response = await fetch('http://localhost:5001/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+            // Store user data in local storage along with the token
+if (response.ok) {
+    const { token, user } = data; // Destructure the token and user from the response
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user)); // Store user data too
+    console.log("LOGGED IN");
+    navigate('/');
+    
+
+}
+else {
+                setMessage(data.message || 'Login failed. Please try again.');
+            }
+        } catch (error) {
+            setMessage('Error: Unable to connect to the server.');
+        }
     };
 
     return (
@@ -34,6 +59,7 @@ const LoginPage = () => {
                 />
                 <button type="submit" className="submit-button">Login</button>
             </form>
+            {message && <p className="message">{message}</p>}
             <footer className="footer">
                 <p>&copy; 2024 DRINK IT! All rights reserved.</p>
             </footer>
@@ -41,4 +67,4 @@ const LoginPage = () => {
     );
 };
 
-export default LoginPage;
+export default Login;

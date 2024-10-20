@@ -1,0 +1,44 @@
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+    background: rgba(0, 0, 0, 0.9); /* Adjusted for better visibility */
+    border-radius: 0; /* Removed border-radius for a flat look */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5); 
+    position: fixed; 
+    top: 0; /* Changed to 0 to stick at the top */
+    left: 0; /* Ensure it sticks to the left side as well */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Keep it above other content */
+}
+.main-content {
+    margin-top: 70px; /* Adjust this value based on the height of your navbar */
+    padding: 20px; /* Optional: Add padding for content spacing */
+}
+/* Common button styles */
+.navbar-button {
+    padding: 10px 20px; 
+    background: linear-gradient(135deg, #00FFAB, #ff00cc); 
+    color: #1c1c1e; 
+    border: none; 
+    border-radius: 20px; /* More rounded corners */
+    font-size: 1.1em; /* Slightly larger font size */
+    cursor: pointer; 
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    text-transform: uppercase; /* Uppercase text for style */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Hover effects */
+.navbar-button:hover { 
+    transform: translateY(-2px) scale(1.05); /* Slight lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 255, 171, 0.8); /* Enhanced shadow on hover */
+    background: linear-gradient(135deg, #ff00cc, #00FFAB); /* Reverse gradient on hover */
+}
+
+/* Active state */
+.navbar-button:active {
+    transform: translateY(0); /* No lift effect when active */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}

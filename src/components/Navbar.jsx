@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../styles/Navbar.css'; // Adjust this path based on your folder structure
 
 const Navbar = () => {
@@ -6,7 +7,7 @@ const Navbar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('token'); // Remove the token
-        window.location.href = '/login'; // Redirect to the login page
+        // Redirect to the login page without full page reload
     };
 
     return (
@@ -16,34 +17,24 @@ const Navbar = () => {
             </div>
             <div className="navbar-links">
                 {/* Home button is always visible */}
-                <button className="navbar-button home-button" onClick={() => window.location.href = '/'}>
-                    Home
-                </button>
+                <Link to="/" className="navbar-button home-button">Home</Link>
 
                 {isLoggedIn ? (
                     <>
-                        <button className="navbar-button profile-button" onClick={() => window.location.href = '/profile'}>
-                            Profile
-                        </button>
+                        <Link to="/profile" className="navbar-button profile-button">Profile</Link>
                         <button className="navbar-button logout-button" onClick={handleLogout}>
                             Logout
                         </button>
                     </>
                 ) : (
                     <>
-                        <button className="navbar-button join-button" onClick={() => window.location.href = '/signup'}>
-                            JOIN NOW
-                        </button>
-                        <button className="navbar-button login-button" onClick={() => window.location.href = '/login'}>
-                            LOGIN
-                        </button>
+                        <Link to="/signup" className="navbar-button join-button">JOIN NOW</Link>
+                        <Link to="/login" className="navbar-button login-button">LOGIN</Link>
                     </>
                 )}
                 
                 {/* About Us button is always visible */}
-                <button className="navbar-button about-button" onClick={() => window.location.href = '/about'}>
-                    About Us
-                </button>
+                <Link to="/about" className="navbar-button about-button">About Us</Link>
             </div>
         </nav>
     );

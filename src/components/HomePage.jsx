@@ -4,20 +4,20 @@ import bottleImage from '../assets/bottle.png';
 import partnerImage from '../assets/partner.png';
 import poolImage from '../assets/pool.png';
 import saveImage from '../assets/save.png';
-import Navbar from './Navbar'; // Import the Navbar component
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import Navbar from './Navbar'; 
+import { useNavigate } from 'react-router-dom'; 
 
 const HomePage = () => {
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate(); 
 
-    // Function to handle navigation on info box click
+    
     const handleInfoBoxClick = (path) => {
-        navigate(path); // Navigate to the specified path
+        navigate(path); 
     };
 
     return (
         <div className="homepage">
-            <Navbar /> {/* Use the Navbar component */}
+            <Navbar /> {}
             <header className="homepage-header">
                 <h1>DRINK IT! with us</h1>
                 <p>Your go-to refill project for sustainable hydration!</p>

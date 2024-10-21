@@ -6,7 +6,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate(); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,11 +19,11 @@ const Login = () => {
             });
 
             const data = await response.json();
-            // Store user data in local storage along with the token
+            
 if (response.ok) {
-    const { token, user } = data; // Destructure the token and user from the response
+    const { token, user } = data; 
     localStorage.setItem('token', token);
-    localStorage.setItem('user', JSON.stringify(user)); // Store user data too
+    localStorage.setItem('user', JSON.stringify(user)); 
     console.log("LOGGED IN");
     navigate('/');
     

@@ -7,7 +7,7 @@ const Profile = () => {
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
 
-    // Fetch user profile on component mount
+    
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
@@ -41,7 +41,7 @@ const Profile = () => {
         };
 
         fetchUserProfile();
-    }, [navigate]); // Include navigate in the dependency array
+    }, [navigate]); 
 
     const handleEdit = () => {
         setIsEditing(true);

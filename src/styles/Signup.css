@@ -1,4 +1,4 @@
-/* src/components/styles/SignUpPage.css */
+
 
 body {
     margin: 0;
@@ -8,7 +8,7 @@ body {
     font-family: 'Poppins', sans-serif; 
 }
 
-/* Sign Up Container */
+
 .signup-container {
     max-width: 400px; 
     margin: 100px auto; 
@@ -21,7 +21,7 @@ body {
     animation: fadeIn 1s ease-in-out; 
 }
 
-/* Form Title */
+
 .signup-title {
     text-align: center; 
     color: #00FFAB; 
@@ -30,7 +30,7 @@ body {
     text-shadow: 0 0 20px #00FFAB, 0 0 40px #00FFAB; 
 }
 
-/* Input Fields */
+
 .input-field {
     width: 100%; 
     padding: 15px; 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../styles/Navbar.css'; // Adjust this path based on your folder structure
+import '../assets/logo.png';
 
 const Navbar = () => {
     const isLoggedIn = !!localStorage.getItem('token'); // Check if the user is logged in
@@ -13,7 +14,9 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-brand">
-                <h2>DRINK IT!</h2> {/* Brand Name */}
+                {/* Replace <h2> with an <img> tag for home.png */}
+                <img src="src/assets/logo.png" alt="Drink It logo" className="navbar-logo" />
+
             </div>
             <div className="navbar-links">
                 {/* Home button is always visible */}

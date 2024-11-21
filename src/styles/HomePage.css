@@ -1,8 +1,13 @@
 .homepage {
-    background: linear-gradient(135deg, #1c1c1e, #2a2a2c);
+    background: url('../assets/home.png') no-repeat center center/cover;
+    background-size: contain;
     color: #f0f0f0;
     padding: 20px;
     font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Use column layout */
+    justify-content: space-between; /* Space out the content */
 }
 
 .navbar {
@@ -56,11 +61,16 @@
 
 .homepage-header {
     text-align: center; 
-    margin-bottom: 40px; 
+    margin-bottom: 0px; 
     animation: fadeIn 1s ease-in-out; 
     position: relative; 
+   
 }
-
+.homepage-header .navbar-logo {
+    height: 200px;  /* Adjust this for the homepage */
+    width: auto;    /* Maintain aspect ratio */
+    transform: translate(50px, 165px); /* Moves it 20px right and 20px down */
+}
 
 .homepage-header h1 {
     font-size: 3.5em; 
@@ -69,6 +79,7 @@
     letter-spacing: 1px; 
     color: #00FFAB; 
     margin: 0; 
+    
 }
 
 .homepage-header p {
@@ -96,10 +107,10 @@
     display: block; 
     width: 50%; 
     height: 5px; 
-    background: linear-gradient(135deg, #00FFAB, #ff00cc); 
+   
     margin: 20px auto 0; 
     border-radius: 10px; 
-    animation: pulse 1.5s infinite; 
+    
 }
 
 
@@ -128,7 +139,7 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 255, 171, 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center; 
     min-width: 250px; 
@@ -150,9 +161,13 @@
 
 footer {
     text-align: center;
-    margin-top: 30px;
+    margin-top: auto;  /* Ensures the footer is pushed to the bottom */
     color: #fff;
     font-size: 0.9em;
+    padding: 10px 20px;  /* Adds padding to the footer */
+    background-color: rgba(0, 0, 0, 0.7);  /* Optional: gives a background for better visibility */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 255, 171, 0.5);  /* Optional: adds a soft shadow effect */
 }
 
 /* Responsive Adjustments */
@@ -167,4 +182,11 @@ footer {
         width: 100%;
         margin: 5px 0;
     }
+}
+.homepage {
+    background: url('../assets/home.png') no-repeat center center/cover;
+    color: #f0f0f0;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh; /* Ensure it covers the full viewport */
 }

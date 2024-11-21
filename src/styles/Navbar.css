@@ -19,7 +19,7 @@
 
 .navbar-button {
     padding: 10px 20px; 
-    background: linear-gradient(135deg, #00FFAB, #ff00cc); 
+    background: linear-gradient(135deg, #246eb9, #b0b0b0); 
     color: #1c1c1e; 
     border: none; 
     border-radius: 20px; 
@@ -34,11 +34,15 @@
 .navbar-button:hover { 
     transform: translateY(-2px) scale(1.05); 
     box-shadow: 0 10px 20px rgba(0, 255, 171, 0.8);
-    background: linear-gradient(135deg, #ff00cc, #00FFAB); 
+    background: linear-gradient(135deg, #2874f0, #edeeed); 
 }
 
 
 .navbar-button:active {
     transform: translateY(0); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+.navbar-logo {
+    height: 60px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
 }

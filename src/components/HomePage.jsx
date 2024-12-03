@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/HomePage.css';
-import bottleImage from '../assets/bottle.png';
 import partnerImage from '../assets/partner.png';
 import poolImage from '../assets/pool.png';
 import saveImage from '../assets/save.png';

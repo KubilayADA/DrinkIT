@@ -1,0 +1,15 @@
+.map-container {
+    position: absolute;
+    top: 61%; /* Position map in the middle vertically */
+    left: 49.80%;
+    transform: translate(-50%, -50%); /* Center the map horizontally and vertically */
+    width: 29.5%; /* Adjust width to 80% of the screen */
+    height: 42%; /* Set a reasonable height for the map */
+    z-index: 10; /* Ensure the map is above the background */
+}
+
+
+.leaflet-container {
+    width: 100% !important; /* Ensure leaflet container takes full width */
+    height: 100% !important; /* Ensure leaflet container takes full height */
+}

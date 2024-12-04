@@ -185,8 +185,38 @@ footer {
 }
 .homepage {
     background: url('../assets/home.png') no-repeat center center/cover;
+    background-size: cover; /* Ensure the background image covers the entire screen */
     color: #f0f0f0;
     padding: 20px;
     font-family: 'Arial', sans-serif;
-    min-height: 100vh; /* Ensure it covers the full viewport */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    position: relative;
+    overflow: hidden; /* Prevent elements from overflowing beyond the homepage */
+}
+
+.map-container {
+    position: absolute;
+    top: 50%;  /* Position it at the vertical center */
+    left: 50%; /* Position it at the horizontal center */
+    transform: translate(-50%, -50%); /* Keep the map centered */
+    width: 60%; /* Set a specific width for the map */
+    height: 400px; /* Set a fixed height for the map */
+    z-index: 10; /* Ensure the map is above the background image */
+}
+
+/* Ensure the Leaflet map fills its container */
+.leaflet-container {
+    width: 100% !important; /* Full width of the container */
+    height: 100% !important; /* Full height of the container */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .map-container {
+        width: 90%;  /* Take up more space on smaller screens */
+        height: 300px; /* Reduce height on small screens */
+    }
 }

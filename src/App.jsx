@@ -7,7 +7,7 @@ import About from './components/About';
 import Profile from './components/Profile';
 import Layout from './components/Layout'; 
 import HowItWorks from './components/HowItWorks';
-import Sustainability from './components/Sustainability.jsx'
+import BerlinMap from './components/BerlinMap';
 
 const App = () => {
     return (
@@ -20,7 +20,7 @@ const App = () => {
                 <Route path="/about" element={<About />} /> 
                 <Route path="/profile" element={<Profile />} /> 
                 <Route path="/how-it-works" element={<HowItWorks />} /> 
-                <Route path="/sustainability" element={<Sustainability />} /> 
+                 
             </Routes>
             </Layout>
         </Router>

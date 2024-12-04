@@ -1,29 +1,19 @@
 import React from 'react';
 import '../styles/HomePage.css';
-import partnerImage from '../assets/partner.png';
-import poolImage from '../assets/pool.png';
-import saveImage from '../assets/save.png';
 import Navbar from './Navbar'; 
 import { useNavigate } from 'react-router-dom'; 
-import '../assets/home.png';
-
 
 const HomePage = () => {
     const navigate = useNavigate(); 
     
-    const handleInfoBoxClick = (path) => {
-        navigate(path); 
-    };
+    // Removed unused 'partnerImage', 'poolImage', 'saveImage', and 'handleInfoBoxClick' to comply with ESLint rules
 
     return (
         <div className="homepage">
             <Navbar />
             <header className="homepage-header">
                 <img src="src/assets/logo.png" alt="Drink It logo" className="navbar-logo" />
-                
             </header>
-
-           
 
             <footer>
                 <p>&copy; 2024 DRINK IT! All rights reserved. By DRINK IT! CODE Berlin</p>
@@ -31,6 +21,5 @@ const HomePage = () => {
         </div>
     );
 };
-
 
 export default HomePage;

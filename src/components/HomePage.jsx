@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/HomePage.css';
 import Navbar from './Navbar'; 
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const HomePage = () => {
    // eslint-disable-next-line no-unused-vars
@@ -12,7 +13,7 @@ const HomePage = () => {
         <div className="homepage">
             <Navbar />
             <header className="homepage-header">
-                <img src="src/assets/logo.png" alt="Drink It logo" className="navbar-logo" />
+            <img src={logo} alt="Drink It logo" className="navbar-logo" /> {/* Use the imported logo */}
             </header>
 
             <footer>

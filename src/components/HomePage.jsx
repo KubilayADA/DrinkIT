@@ -4,9 +4,9 @@ import Navbar from './Navbar';
 import { useNavigate } from 'react-router-dom'; 
 
 const HomePage = () => {
+   // eslint-disable-next-line no-unused-vars
     const navigate = useNavigate(); 
     
-    // Removed unused 'partnerImage', 'poolImage', 'saveImage', and 'handleInfoBoxClick' to comply with ESLint rules
 
     return (
         <div className="homepage">
